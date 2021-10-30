@@ -15,7 +15,7 @@ const Header = (props) => {
                        <>
                        <li>Welcome, {props.user.displayName}</li>
                        <li>
-                            <Link to="/dashboard">🏡Dashboard</Link> 
+                            <Link to="/dashboard">Dashboard</Link> 
                         </li>
                        <li onClick={logOut}>Logout</li>
                        <li> 

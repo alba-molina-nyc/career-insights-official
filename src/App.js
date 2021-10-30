@@ -31,8 +31,33 @@ function App() {
   
   const [ user, setUser ] = useState(null);
 
+  const [ contacts, setContacts ] = useState([]);
+
+  const API_URL = "http://localhost:3001/api/contacts"
+
+  const getContacts = async () => {
+  const response = await fetch(API_URL);
+  const contacts = response.json();
+  setContacts(contacts);
+}
+
+const createContact = async person => {
+  await fetch(API_URL, {
+    method: 'POST', 
+    headers: {'Content-type': 'Application/json'},
+    body: JSON.stringify(person)
+});
+getContacts();
+
+
+}
+
+  //TODO: add heroku api/url
+
   useEffect(() => {
   const unsubscribe = auth.onAuthStateChanged(user => setUser(user));
+
+  getContacts();
   return () => unsubscribe();
   }, []);
 
