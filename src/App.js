@@ -89,8 +89,14 @@ getContacts();
           user ? <Dashboard /> : <Redirect to="/login" />
         )}>
         </Route>
-        <Route path="/contacts">
-          <Contacts />
+        <Route path="/contacts" render={() => (
+          user ? (
+          <Contacts 
+          contacts={contacts} 
+          createContact={createContact} 
+          /> 
+          ) : <Redirect to="/login" />
+        )} >
         </Route>
         <Route path="/applications">
           <Applications />
