@@ -17,7 +17,18 @@ const Contacts = (props) => {
         }));
     }
 
-    const handleSubmit =
+    const handleSubmit = event => {
+        event.preventDefault(); 
+        props.createContact(formState)
+        setFormState({
+        firstName: "",
+        lastName: "",
+        email:"",
+        companyName: "",
+        role: "",
+        lastContacted: "",
+        })
+    }
 
     // form helper functions 
 
