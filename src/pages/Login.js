@@ -4,7 +4,7 @@ import { signIn } from '../services/firebase'
 const Login = (props) => {
     return (
         <StyledMain>
-            <h1>Login to your Career Insights account</h1>
+            <h1>Login to your account</h1>
             <button onClick={signIn}>Sign in with Google</button>
         </StyledMain>
     );
