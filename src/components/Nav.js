@@ -7,11 +7,14 @@ const Nav = (props) => {
                 <nav>
                    <ul>
                         <li>
-                            <Link to="/dashboard"> 🏡Dashboard </Link> </li>
-                            <li>
-                            <Link to="/applications"> 🔂Applications Tracker</Link> </li>
-                            <li>
-                            <Link to="/contacts"> 📇Networking Management</Link> </li>      
+                            <Link to="/dashboard">🏡Dashboard</Link> 
+                        </li>
+                        <li>
+                            <Link to="applications">🔂Applications Tracker</Link> 
+                        </li>
+                        <li>
+                            <Link to="/contacts">📇Networking Management</Link> 
+                        </li>      
                    </ul>
                    </nav>
    </>

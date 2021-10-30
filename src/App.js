@@ -23,13 +23,16 @@ function App() {
   const [ user, setUser ] = useState(null);
 
   useEffect(() => {
-    auth.onAuthStateChanged(user => setUser(user));
-  }, [])
+  const unsubscribe = auth.onAuthStateChanged(user => setUser(user));
+  return () => unsubscribe();
+  }, []);
+
+
  
 
   return (
     <>
-      <Header />
+      <Header user={user} />
       <Nav />
       <Switch>
         <Route exact path="/">
@@ -56,6 +59,7 @@ function App() {
         <Route path="/applications/:id">
           <Show />
         </Route>
+        <Footer />
       </Switch>
       </>
   );
