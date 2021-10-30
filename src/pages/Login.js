@@ -1,8 +1,12 @@
+import { StyledMain } from '../styles';
+import { signIn } from '../services/firebase'
+
 const Login = (props) => {
     return (
-        <main>
+        <StyledMain>
             <h1>Login to your Career Insights account</h1>
-        </main>
+            <button onClick={signIn}>Sign in with Google</button>
+        </StyledMain>
     );
 };
 
