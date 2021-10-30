@@ -11,6 +11,7 @@ import Dashboard from './pages/Dashboard';
 import Show from './pages/Show';
 import About from './pages/About';
 import Solutions from './pages/Solutions';
+import Product from './pages/Product';
 
 import { auth } from './services/firebase';
 
@@ -101,6 +102,7 @@ function App() {
   return (
     <>
       <Header />
+      <Nav />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -111,11 +113,20 @@ function App() {
         <Route path="/dashboard">
           <Dashboard />
         </Route>
+        <Route path="/product">
+          <Product />
+        </Route>
         <Route path="/solutions">
           <Solutions />
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/contacts/:id">
+          <Show />
+        </Route>
+        <Route path="/positions/:id">
+          <Show />
         </Route>
       </Switch>
       </>

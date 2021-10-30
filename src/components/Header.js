@@ -1,33 +1,54 @@
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { logOut } from '../services/firebase';
+import { findByLabelText } from '@testing-library/react';
 
 
 const Header = (props) => {
-
+    const StyledHeader = styled.header`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    background-color: #932432;
+    color: #ffffff;
+    box-shadow: 1px 1px 3px 2px #808080;
+    nav {
+        display: flex;
+        align-items: center;
+        ul {
+            display: flex;
+            list-style: none;
+            li {
+                margin-right: 1.5rem;
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }`
     return (
-       <>
-            <h1>Career Insights</h1>
+        <StyledHeader>
+            <h3>Career Insights</h3>
             <nav>
-                <ul>
-                    {
-                        props.user ?
-                        <>
-                            <li>Welcome, {props.user.displayName}</li>
-                            <li>
-                                <img 
-                                    src={props.user.photoURL} 
-                                    alt={props.user.displayName} 
-                                />
-                            </li>
-                            <li onClick={logOut}>Logout</li>
-                        </>
-                        :<li>
-                            <Link to="/login">Login</Link>
-                        </li>
-                    }
-                </ul>
+               <ul>
+                   <li>Product</li>
+                   <li>Solutions</li>
+                   <li>About</li>
+                   <li>Logout</li>
+                   <li>
+                       <Link>Login</Link>
+                   </li>
+               </ul>
             </nav>
-       </>
+        </StyledHeader>
     );
 };
 
