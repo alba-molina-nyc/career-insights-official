@@ -1,11 +1,8 @@
-import { signIn } from '../services/firebase';
-
 const Show = (props) => {
     return (
-        <>
-            <h1>Show</h1>
-            
-        </>
+        <main>
+            <h1> Show</h1>
+        </main>
     );
 };
 
