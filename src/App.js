@@ -45,7 +45,9 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/login">
+        <Route path="/login" render={() => (
+          user ? <Dashboard /> : <Login />
+        )}>
           <Login />
         </Route>
         <Route path="/product">
