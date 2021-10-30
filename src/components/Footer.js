@@ -1,5 +1,3 @@
-
-
 const Footer = (props) => {
     return (
       <>
