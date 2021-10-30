@@ -9,9 +9,6 @@ const Nav = (props) => {
                        {
                            props.user ?
                            <>
-                            <li>
-                            <Link to="/dashboard">🏡Dashboard</Link> 
-                        </li>
                         <li>
                             <Link to="applications">🔂Applications Tracker</Link> 
                         </li>

@@ -14,11 +14,15 @@ const Header = (props) => {
                        props.user ?
                        <>
                        <li>Welcome, {props.user.displayName}</li>
+                       <li>
+                            <Link to="/dashboard">🏡Dashboard</Link> 
+                        </li>
                        <li onClick={logOut}>Logout</li>
                        <li> 
                            <img src= {props.user.photoURL}
                            alt={props.user.displayName} />
                        </li>
+                       
                        </>
                     
                        :<>

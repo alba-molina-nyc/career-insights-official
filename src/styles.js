@@ -7,16 +7,21 @@ export const StyledHeader = styled.header`
     background-color: #932432;
     color: #ffffff;
     box-shadow: 1px 1px 3px 2px #808080;
+
     nav {
         display: flex;
         align-items: center;
+        text-decoration: none;
+
         ul {
             display: flex;
             list-style: none;
+            text-decoration: none;
             li {
                 margin-right: 1.5rem;
                 font-size: 1.5rem;
                 font-weight: 700;
+                text-decoration: none;
                 img {
                     height: 50px;
                     border-radius: 50%;
