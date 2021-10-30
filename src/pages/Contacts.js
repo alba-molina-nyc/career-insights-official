@@ -1,10 +1,10 @@
 import { StyledMain } from '../styles';
-const Show = (props) => {
+const Contacts = (props) => {
     return (
         <StyledMain>
-            <h1>Career insights Show Page!</h1>
+            <h1>Show Contact Page!</h1>
         </StyledMain>
     );
 };
 
-export default Show;
+export default Contacts;

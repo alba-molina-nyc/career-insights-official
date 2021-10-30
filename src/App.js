@@ -8,8 +8,9 @@ import Nav from './components/Nav';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import Show from './pages/Show';
-import ShowRoadMap from './pages/ShowRoadMap';
+import Contacts from './pages/Contacts';
+import Roadmap from './pages/Roadmap';
+import Applications from './pages/Applications';
 import About from './pages/About';
 import Solutions from './pages/Solutions';
 import Product from './pages/Product';
@@ -63,14 +64,14 @@ function App() {
           user ? <Dashboard /> : <Redirect to="/login" />
         )}>
         </Route>
-        <Route path="/contacts/:id">
-          <Show />
+        <Route path="/contacts">
+          <Contacts />
         </Route>
-        <Route path="/applications/:id">
-          <Show />
+        <Route path="/applications">
+          <Applications />
         </Route>
         <Route path="/roadmap">
-          <ShowRoadMap />
+          <Roadmap />
         </Route>
       </Switch>
       <Footer />

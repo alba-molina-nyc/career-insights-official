@@ -2,7 +2,7 @@ import { StyledMain } from '../styles';
 const Solutions = (props) => {
     return (
         <StyledMain>
-            <h1>Career Insights Solutions </h1>
+            <h1>Solutions </h1>
             <p>
             Experience an innovative and robust, cloud-based applicant-first software suite designed to increase applicant productivity, foster collaboration, and enhance the application experience from source to hire.
             </p>
