@@ -1,7 +1,7 @@
 const Footer = (props) => {
     return (
       <>
-            <p>Copyright &copy; All Rights Reserved React CRM {new Date().getFullYear()}</p>
+            <p>Copyright &copy; All Rights Reserved Career Insights {new Date().getFullYear()}</p>
        </>
     );
 };

@@ -10,6 +10,9 @@ const Nav = (props) => {
         <h1>
             Your Applications
         </h1>
+        <h1>
+            Your Events
+        </h1>
     </Nav>
     );
 };

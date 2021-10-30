@@ -6,7 +6,7 @@ const Header = (props) => {
 
     return (
        <>
-            <h1>React CRM</h1>
+            <h1>Career Insights</h1>
             <nav>
                 <ul>
                     {
