@@ -17,6 +17,13 @@ import { auth } from './services/firebase';
 
 import './App.css';
 
+// const ProtectedRoute = ({ user, component }) => {
+//   if(props.user){
+//     return props.component;
+//   } else {
+//     return <Redirect to="/login" />
+//   }
+// };
 
 function App() {
   
@@ -41,9 +48,6 @@ function App() {
         <Route path="/login">
           <Login />
         </Route>
-        <Route path="/dashboard">
-          <Dashboard />
-        </Route>
         <Route path="/product">
           <Product />
         </Route>
@@ -52,6 +56,10 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/dashboard" render={() => (
+          user ? <Dashboard /> : <Redirect to="/login" />
+        )}>
         </Route>
         <Route path="/contacts/:id">
           <Show />
