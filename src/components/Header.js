@@ -21,11 +21,11 @@ const Header = (props) => {
             list-style: none;
             li {
                 margin-right: 1.5rem;
+                font-size: 1.5rem;
+                font-weight: 700;
                 a{
                     text-decoration: none;
                     color: inherit;
-                    font-size: 1.5rem;
-                    font-weight: 700;
                 }
                 &:hover{
                     cursor: pointer;
