@@ -43,7 +43,8 @@ export const StyledFooter = styled.footer`
 display: flex;
 align-items: center;
 height: 5rem;
-justify-content: center;`
+justify-content: center;
+`;
 
 export const StyledNav = styled.nav`
 
