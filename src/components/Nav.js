@@ -4,7 +4,6 @@ import { StyledNav } from '../styles.js';
 const Nav = (props) => {
         return (
             <StyledNav>
-            <h1>Nav Bar</h1>
                 <nav>
                    <ul>
                        {
@@ -19,6 +18,11 @@ const Nav = (props) => {
                         <li>
                             <Link to="/contacts">📇Networking Management</Link> 
                         </li>  
+                        <li>
+                            <Link to="/roadmap">🛣Career Roadmap</Link> 
+                        </li>  
+
+
                         </>
                         :<>
              

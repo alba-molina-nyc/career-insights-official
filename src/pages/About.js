@@ -1,8 +1,9 @@
+import { StyledMain } from '../styles';
 const About = (props) => {
     return (
-        <main>
+        <StyledMain>
             <h1>About</h1>
-        </main>
+        </StyledMain>
     );
 };
 

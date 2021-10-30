@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Show from './pages/Show';
+import ShowRoadMap from './pages/ShowRoadMap';
 import About from './pages/About';
 import Solutions from './pages/Solutions';
 import Product from './pages/Product';
@@ -68,8 +69,11 @@ function App() {
         <Route path="/applications/:id">
           <Show />
         </Route>
-        <Footer />
+        <Route path="/roadmap">
+          <ShowRoadMap />
+        </Route>
       </Switch>
+      <Footer />
       </>
   );
 }

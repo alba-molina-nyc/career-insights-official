@@ -1,6 +1,7 @@
+import { StyledMain } from '../styles';
 const Solutions = (props) => {
     return (
-        <main>
+        <StyledMain>
             <h1>Career Insights Solutions </h1>
             <p>
             Experience an innovative and robust, cloud-based applicant-first software suite designed to increase applicant productivity, foster collaboration, and enhance the application experience from source to hire.
@@ -11,7 +12,7 @@ const Solutions = (props) => {
             <p>
             This board helps you to keep track of internship and job applications, ensuring you never miss an opportunity! 
             </p>
-        </main>
+        </StyledMain>
     );
 };
 
