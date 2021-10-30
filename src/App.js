@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Show from './pages/Show';
+import About from './pages/About';
+import Solutions from './pages/Solutions';
 
 import { auth } from './services/firebase';
 
@@ -98,33 +100,25 @@ function App() {
 
   return (
     <>
-      <Header user={user} />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/login" render={() => (
-            user ? <Redirect to="/dashboard" /> : <Login />
-          )} />
-          <Route path="/dashboard" render={() => (
-            user ? (
-              <Dashboard 
-                contacts={contacts} 
-                createContact={createContact} 
-              />
-            ) : <Redirect to="/login" />
-          )} />
-          <Route path="/contacts/:id" render={(props) => (
-            user ? (
-              <Show 
-                contact={contacts.find(c => c._id === props.match.params.id)} 
-                createNote={createNote}
-              />
-            ) : <Redirect to="/login" />
-          )} />
-        </Switch>
-      <Footer />
-    </>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="login">
+          <Login />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        <Route path="/solutions">
+          <Solutions />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+      </Switch>
+      </>
   );
 }
 
