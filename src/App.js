@@ -33,7 +33,7 @@ function App() {
   return (
     <>
       <Header user={user} />
-      <Nav />
+      <Nav user={user}/>
       <Switch>
         <Route exact path="/">
           <Home />

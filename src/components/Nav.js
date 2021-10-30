@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
+import { StyledNav } from '../styles.js';
 
 const Nav = (props) => {
         return (
-            <>
+            <StyledNav>
             <h1>Nav Bar</h1>
                 <nav>
                    <ul>
-                        <li>
+                       {
+                           props.user ?
+                           <>
+                            <li>
                             <Link to="/dashboard">🏡Dashboard</Link> 
                         </li>
                         <li>
@@ -14,10 +18,18 @@ const Nav = (props) => {
                         </li>
                         <li>
                             <Link to="/contacts">📇Networking Management</Link> 
-                        </li>      
+                        </li>  
+                        </>
+                        :<>
+             
+                           <Link to="/"></Link>
+                           </>
+                       }
+                           
                    </ul>
-                   </nav>
-   </>
+                </nav>
+                </StyledNav>
+ 
         );
     };
      
