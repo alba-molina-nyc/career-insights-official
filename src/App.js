@@ -46,9 +46,8 @@ function App() {
           <Home />
         </Route>
         <Route path="/login" render={() => (
-          user ? <Dashboard /> : <Login />
+          user ? <Redirect to="/dashboard" /> : <Login />
         )}>
-          <Login />
         </Route>
         <Route path="/product">
           <Product />
