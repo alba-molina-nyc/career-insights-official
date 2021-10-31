@@ -1,20 +1,6 @@
 import { useState } from 'react';
 import { StyledMain } from '../styles';
 const Dashboard = (props) => {
-    // const [ formState, setFormState ] = useState({
-    //     firstName: "",
-    //     lastName: "",
-    //     email:"",
-    //     companyName: "",
-    //     role: "",
-    //     lastContacted: "",
-    // });
-    // const handleChange = event => {
-    //     setFormState(prevState => ({
-    //         ...prevState,
-    //         [event.target.name]: event.target.value
-    //     }));
-    // }
 
     return (
         <StyledMain>
