@@ -54,3 +54,9 @@ justify-content: center;
 export const StyledNav = styled.nav`
 
     `
+export const StyledForm = styled.form`
+
+    `
+export const StyledSection = styled.section`
+
+    `

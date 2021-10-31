@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { StyledMain } from '../styles';
+import { Link } from 'react-router-dom';
+import { StyledForm, StyledMain, StyledSection, StyledTable } from '../styles';
 const Contacts = (props) => {
     const [ formState, setFormState ] = useState({
         firstName: "",
@@ -43,36 +44,42 @@ const Contacts = (props) => {
                     value={formState.firstName} 
                     name="firstName" 
                     type="text" 
+                    placeholder="First Name"
                     />
                     <input 
                     onChange={handleChange}
                     value={formState.lastName} 
                     name="lastName" 
                     type="text" 
+                    placeholder="Last Name"
                     />
                     <input 
                     onChange={handleChange}
                     value={formState.email} 
                     name="email" 
                     type="text" 
+                    placeholder="Email"
                     />
                     <input 
                     onChange={handleChange}
                     value={formState.companyName} 
                     name="companyName" 
                     type="text" 
+                    placeholder="Company Name"
                     />
                     <input 
                     onChange={handleChange}
                     value={formState.role} 
                     name="role" 
                     type="text" 
+                    placeholder="Role"
                     />
                     <input 
                     onChange={handleChange}
                     value={formState.lastContacted} 
                     name="lastContacted" 
                     type="text" 
+                    placeholder="Date Last Contacted"
                     />
 
 
