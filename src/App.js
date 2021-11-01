@@ -27,19 +27,27 @@ function App() {
 
   const [ contacts, setContacts ] = useState([]);
 
-  const CONTACTS_API_URL = "http://localhost:3001/contacts"
+  const CONTACTS_DISPLAY_URL = "http://localhost:3001/contacts"
+
+  const CONTACTS_CREATE_URL = "http://localhost:3001/contacts/new"
+
+
 
   //contacts helper functions
   const getContacts = async() => {
-    const response = await fetch(CONTACTS_API_URL);
+    const response = await fetch(CONTACTS_DISPLAY_URL, {
+      method: 'GET',
+    });
     const contacts = await response.json();
     setContacts(contacts);
   }
   
   const createContact = async person => {
-    await fetch(CONTACTS_API_URL, {
+    await fetch(CONTACTS_CREATE_URL, {
       method: 'POST',
-      headers: {'Content-type': 'Application/json'},
+      headers: {
+        'Content-type': 'Application/json'
+      },
       body: JSON.stringify(person)
     });
     getContacts(); // to refresh the list of contacts
@@ -49,9 +57,6 @@ function App() {
     getContacts();
     return () => unsubscribe();
   }, []);
-
-
-
 
   return (
     <>
