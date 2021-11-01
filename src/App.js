@@ -35,10 +35,13 @@ function App() {
 
   //contacts helper functions
   const getContacts = async() => {
+    if(!user) return;
     const token = await user.getIdToken();
     console.log(token);
     const response = await fetch(CONTACTS_DISPLAY_URL, {
-      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer' + token
+      }
     });
     const contacts = await response.json();
     setContacts(contacts);
@@ -60,7 +63,7 @@ function App() {
     const unsubscribe = auth.onAuthStateChanged(user => setUser(user));
     getContacts();
     return () => unsubscribe();
-  }, []);
+  }, [user]);
 
   return (
     <>
