@@ -35,6 +35,8 @@ function App() {
 
   //contacts helper functions
   const getContacts = async() => {
+    const token = await user.getIdToken();
+    console.log(token);
     const response = await fetch(CONTACTS_DISPLAY_URL, {
       method: 'GET',
     });
@@ -43,12 +45,14 @@ function App() {
   }
   
   const createContact = async person => {
+     const data = { ...person, managedBy: user.uid
+    }
     await fetch(CONTACTS_CREATE_URL, {
       method: 'POST',
       headers: {
         'Content-type': 'Application/json'
       },
-      body: JSON.stringify(person)
+      body: JSON.stringify(data)
     });
     getContacts(); // to refresh the list of contacts
   }
@@ -69,6 +73,15 @@ function App() {
        <Route path="/login" render={() => (
          user ? <Redirect to="/dashboard" /> : <Login />
        )} />
+       <Route path="/product">
+          <Product />
+        </Route>
+        <Route path="/solutions">
+          <Solutions />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
        <Route path="/dashboard" render={() => (
          user ? <Dashboard /> : <Redirect to="/login" />
        )} />

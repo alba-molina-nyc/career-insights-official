@@ -20,6 +20,7 @@ const handleChange = event => {
 
 const handleSubmit = event => {
     event.preventDefault();
+    console.log('we are here')
     props.createContact(formState);
     setFormState({
         firstName: "",
@@ -33,8 +34,8 @@ const handleSubmit = event => {
     return (
         <StyledMain>
             <h1>Contacts</h1>
-            <section onSubmit={handleSubmit}>
-                <form>
+            <section>
+                <form onSubmit={handleSubmit}>
                  <input 
                  onChange={handleChange} 
                  value={formState.firstName} 
@@ -97,7 +98,6 @@ const handleSubmit = event => {
                                     <td>{c.lastName}</td> 
                                     <td>{c.companyName}</td> 
                                     <td>{c.lastContacted}</td> 
-
                                 </tr>
                                 
                             ))
