@@ -29,18 +29,21 @@ function App() {
 
   const CONTACTS_DISPLAY_URL = "http://localhost:3001/contacts"
 
-  const CONTACTS_CREATE_URL = "http://localhost:3001/contacts/new"
+  const CONTACTS_CREATE_URL = "http://localhost:3001/contacts"
 
 
 
   //contacts helper functions
-  const getContacts = async() => {
+  const getContacts = async () => {
     if(!user) return;
+
     const token = await user.getIdToken();
-    console.log(token);
+    console.log(token)
     const response = await fetch(CONTACTS_DISPLAY_URL, {
+      method: 'GET',
       headers: {
-        'Authorization': 'Bearer' + token
+        'Content-type': 'Application/json',
+        'Authorization': 'Bearer ' + token
       }
     });
     const contacts = await response.json();
@@ -48,12 +51,15 @@ function App() {
   }
   
   const createContact = async person => {
+    if(!user) return;
+    const token = await user.getIdToken();
      const data = { ...person, managedBy: user.uid
     }
     await fetch(CONTACTS_CREATE_URL, {
       method: 'POST',
       headers: {
-        'Content-type': 'Application/json'
+        'Content-type': 'Application/json',
+        'Authorization': 'Bearer ' + token
       },
       body: JSON.stringify(data)
     });
