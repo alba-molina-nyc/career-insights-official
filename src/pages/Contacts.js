@@ -78,10 +78,36 @@ const handleSubmit = event => {
                  placeholder="Last Contacted"
                  />
                  <input type="submit" value="Add Contact" />
-
-                        
-                   
                 </form>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Company Name</th>
+                            <th>Last Contacted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            props.contacts.map(c => (
+                                <tr key={c.id}>
+                                    <td>{c.firstName}</td> 
+                                    <td>{c.lastName}</td> 
+                                    <td>{c.companyName}</td> 
+                                    <td>{c.lastContacted}</td> 
+
+                                </tr>
+                                
+                            ))
+                        }
+                    </tbody>
+                </table>
+
+
+
+
             </section>
 
         </StyledMain>
