@@ -56,6 +56,7 @@ function App() {
   return (
     <>
      <Header user={user} />
+     <Nav user={user}/>
      <Switch>
        <Route exact path="/">
          <Home />
