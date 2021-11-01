@@ -1,5 +1,7 @@
+import { Helmet } from 'react-helmet';
 import { useState } from 'react';
 import { StyledMain } from '../styles';
+import { Link } from 'react-router-dom';
 
 const Contacts = (props) => {
     const [ formState, setFormState ] = useState({
@@ -32,6 +34,10 @@ const handleSubmit = event => {
     }); // this is to clear the form after it has been submitted
 }
     return (
+ <>
+        <Helmet>
+        <title>Contacts</title>
+        </Helmet>
         <StyledMain>
             <h1>Contacts</h1>
             <section>
@@ -98,6 +104,7 @@ const handleSubmit = event => {
                                     <td>{c.lastName}</td> 
                                     <td>{c.companyName}</td> 
                                     <td>{c.lastContacted}</td> 
+                                    <td><Link to={`/contacts/${c._id}`}>See More Details</Link></td>
                                 </tr>
                                 
                             ))
@@ -111,6 +118,7 @@ const handleSubmit = event => {
             </section>
 
         </StyledMain>
+        </>
     )
 }
 export default Contacts;

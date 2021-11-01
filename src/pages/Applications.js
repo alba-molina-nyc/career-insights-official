@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { StyledMain } from '../styles';
 const Applications = (props) => {
     // const [formState, setFormState ] = useState({
@@ -30,9 +31,14 @@ const Applications = (props) => {
 
     // })
     return (
+        <>
+        <Helmet>
+        <title>Applications</title>
+        </Helmet>
         <StyledMain>
             <h1>Applications Show Page!</h1>
         </StyledMain>
+        </>
     );
 };
 

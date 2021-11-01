@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -14,7 +15,7 @@ import Applications from './pages/Applications';
 import About from './pages/About';
 import Solutions from './pages/Solutions';
 import Product from './pages/Product';
-// import Show from './pages/Show';
+import Show from './pages/Show';
 
 
 import { auth } from './services/firebase';
@@ -26,6 +27,11 @@ function App() {
   const [ user, setUser ] = useState(null);
 
   const [ contacts, setContacts ] = useState([]);
+
+  const [ notes, setNotes ] = useState([]);
+
+  const fetchData = useRef(null);
+  console.log(fetchData)
 
   const CONTACTS_DISPLAY_URL = "http://localhost:3001/contacts"
 
@@ -65,11 +71,43 @@ function App() {
     });
     getContacts(); // to refresh the list of contacts
   }
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => setUser(user));
+
+  const createNote = async (note, id) => {
+    if(!user) return;
+    const token = await user.getIdToken();
+    const data = { ...note, createdBy: user.uid };
+    await fetch(`${CONTACTS_DISPLAY_URL}/${id}/notes`, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'Application/json',
+        'Authorization': 'Bearer ' + token
+      },
+      body: JSON.stringify(data)
+    });
     getContacts();
-    return () => unsubscribe();
+  }
+
+  useEffect(() => {
+    fetchData.current = getContacts;
+  });
+
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      setUser(user);
+
+      if(user) {
+        fetchData.current();
+      } else {
+        setContacts([]);
+      }
+      
+    });
+    
+    // TODO: only get contacts after a user has signed in
+    return () => unsubscribe(); // clean up action - remove observer from memory when not needed
   }, [user]);
+ 
 
   return (
     <>
@@ -91,9 +129,6 @@ function App() {
         <Route path="/about">
           <About />
         </Route>
-       <Route path="/dashboard" render={() => (
-         user ? <Dashboard /> : <Redirect to="/login" />
-       )} />
        <Route path="/contacts" render={() => (
          user ? (
          <Contacts 
@@ -101,6 +136,9 @@ function App() {
          createContact={createContact} 
          /> 
          ) : <Redirect to="/login" />
+       )} />
+        <Route path="/dashboard" render={() => (
+         user ? <Dashboard /> : <Redirect to="/login" />
        )} />
      </Switch>
      <Footer />

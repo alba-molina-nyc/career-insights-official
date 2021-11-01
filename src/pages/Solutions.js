@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { StyledMain } from '../styles';
 const Solutions = (props) => {
     return (
