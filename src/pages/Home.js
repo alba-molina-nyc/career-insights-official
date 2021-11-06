@@ -5,7 +5,7 @@ const Home = (props) => {
         <>
         <Helmet>
             <title>Career Insights</title>
-            <meta name="description" content="A simple tool to help applicants during the application job and career process"></meta>
+          
         </Helmet>
         <StyledMain>
             <h1>Home</h1>

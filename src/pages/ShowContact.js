@@ -7,6 +7,7 @@ const Show = (props) => {
         content: ""
     });
 
+
     const handleChange = event => (
         setFormState({ content: event.target.value })
     );
@@ -16,21 +17,21 @@ const Show = (props) => {
         props.createNote(formState, props.contact._id);
         setFormState({ content: '' }); // reset our form
     };
-
+  
     return (
         <>
             <Helmet>
-                <title>See Details</title>
-                <meta name="description" content="See details for the following contact" />
-                <meta name="keywords" content="CRM, Client Relationship Management, Business, Tools" />
+                <title>{props.contact.firstName} {props.contact.lastName} | Career Post </title>
             </Helmet>
+            
             <StyledMain>
-                <h1>Show</h1>
+               
                 <section>
                     <h3>{props.contact.firstName} {props.contact.lastName}</h3>
+
                     {props.contact.companyName && <h5>Works at: {props.contact.companyName}</h5>}
                     <p>Email: {props.contact.email}</p>
-                    <p style={{fontWeight: 700}}>{props.contact.unionMember ? 'The contact is a Union Member' : 'Not a Union Member'}</p>
+                    <p style={{fontWeight: 700}}>{props.contact.linkedInConnection ? 'The contact is a LinkedIn connection' : 'Not a LinkedIn Connection'}</p>
                     {
                         props.contact.notes.length ?
                         <>

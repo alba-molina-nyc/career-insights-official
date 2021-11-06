@@ -2,6 +2,10 @@ import { Helmet } from 'react-helmet';
 import { StyledMain } from '../styles';
 const Solutions = (props) => {
     return (
+        <>
+        <Helmet>
+        <title> Career Post | Solutions </title>
+    </Helmet>
         <StyledMain>
             <h1>Solutions </h1>
             <p>
@@ -14,6 +18,7 @@ const Solutions = (props) => {
             This board helps you to keep track of internship and job applications, ensuring you never miss an opportunity! 
             </p>
         </StyledMain>
+        </>
     );
 };
 
