@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { StyledMain } from '../styles';
+import { Link } from 'react-router-dom';
 
 const ShowContact = (props) => {
     const [formState, setFormState ] = useState({
@@ -28,7 +29,9 @@ const ShowContact = (props) => {
                     <h3>{props.application.submissionStatus} {props.application.dueDate}</h3>
 
                     {props.application.companyName && <h5>Company Name: {props.application.companyName}</h5>}
-                    <p>Company Size: {props.application.companySize} Job Post: {props.application.jobPost} </p>
+                    <p>Company Size: {props.application.companySize} Job Post:
+                    
+                     {props.application.companyName}</p>
                     
                     <p style={{fontWeight: 700}}>{props.application.remote ? 'The position is a remote position' : 'Not a remote position'}</p>
                     {

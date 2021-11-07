@@ -35,7 +35,7 @@ function App() {
   const [ contacts, setContacts ] = useState([]);
   const [ applications, setApplications ] = useState([]);
   const [ chart, setChart ] = useState([]);
-  const [  contactedChart, setcontactedChart ] = useState([]);
+  const [ contactedChart, setcontactedChart ] = useState([]);
   const fetchData = useRef(null);
   let token;
 
