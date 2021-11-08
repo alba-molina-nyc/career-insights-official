@@ -155,8 +155,9 @@ const ContactDashboard = (props) => {
                         <tr>
                             <th>First Name</th>
                             <th>Last Name</th>
+                            <th>Company Name</th>
                             <th>Company Size</th>
-                            <th>Company Size</th>
+                            <th>Details</th>
                         </tr>
                     </thead>
                     <tbody>

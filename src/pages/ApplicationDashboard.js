@@ -158,6 +158,7 @@ const ApplicationDashboard = (props) => {
                             <th>Company Name</th>
                             <th>Location</th>
                             <th>Actions</th>
+                           
                         </tr>
                     </thead>
                     <tbody>

@@ -4,13 +4,19 @@ export const StyledHeader = styled.header`
     align-items: center;
     justify-content: space-between;
     padding-left: 1rem;
-    background-color: #932432;
+    background-color: rgb(76,20,76);
     color: #ffffff;
     box-shadow: 1px 1px 3px 2px #808080;
+
+    h1, a {
+        text-decoration: none;
+        color: white;
+    }
     nav {
         display: flex;
         align-items: center;
         text-decoration: none;
+     
         ul {
             display: flex;
             list-style: none;
@@ -53,6 +59,9 @@ padding-top: 3rem;
                 background-color: rgba(255, 206, 86, 1)
 
             }
+            }
+
+
             }
            
 }
@@ -101,6 +110,7 @@ input {
 input[type="submit"] {
     width: 100%;
     margin: 1rem 0;
+    background-color: rgb(0,150,161);
 }
 
 `;
@@ -114,8 +124,18 @@ th, td {
     padding: 5px;
 }
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color:rgb(236,174,42);
 }
+
+tr:nth-child(odd) {
+    background-color: rgb(0,150,161)
+}
+
+th {
+    background-color: white;
+    text-align-items: center;
+}
+
 @media(min-width: 975px) {
     width: 60%;
     height: 50%;
