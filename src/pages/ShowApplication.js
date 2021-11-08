@@ -26,12 +26,17 @@ const ShowContact = (props) => {
             <StyledMain>
                
                 <section>
-                    <h3>{props.application.submissionStatus} {props.application.dueDate}</h3>
+                    <h1>Company Name: {props.application.companyName}</h1>
 
-                    {props.application.companyName && <h5>Company Name: {props.application.companyName}</h5>}
-                    <p>Company Size: {props.application.companySize} Job Post:
+                    <h1>Job Title: {props.application.title} </h1>
                     
-                     {props.application.companyName}</p>
+                    <h3>Next steps: {props.application.nextSteps} </h3>
+                    <h3>Next Steps Due Date: {props.application.dueDate}</h3>
+
+                    {props.application.companyName && <h5>Company Location: {props.application.location}</h5>}
+                    <p>Company Size: {props.application.companySize}</p>
+                    
+                     <a href={props.application.jobPost}>Job Post: {props.application.title}  </a>
                     
                     <p style={{fontWeight: 700}}>{props.application.remote ? 'The position is a remote position' : 'Not a remote position'}</p>
                     {
@@ -53,10 +58,6 @@ const ShowContact = (props) => {
                             value={formState.content}
                         ></textarea>
                         <input type="submit" value="Add To Do" />
-                        <input 
-                        type="submit" 
-                        value="Delete"
-                        />
                     </form>
                 </section>
             </StyledMain>
