@@ -15,8 +15,8 @@ const Dashboard = (props) => {
         <StyledMain>
             <h1><Link to="/contacts">Networking Management Dashboard </Link></h1>
             <h1><Link to="/applications">Job Application Management Dashboard </Link></h1>
-            <h1><Link to="chart/contacted">Networking Management Data & Analytics </Link></h1>
-            <h1><Link to="/chart">Job Application Management Data & Analytics </Link></h1>
+            <h1><Link to="chart/contacts">Networking Management Data & Analytics </Link></h1>
+            <h1><Link to="/chart/applications">Job Application Management Data & Analytics </Link></h1>
             <h1><Link to="/search">Search</Link></h1>
     
         </StyledMain>

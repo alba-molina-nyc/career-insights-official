@@ -47,6 +47,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding-top: 3rem;
+background-color: rgb(76,20,76, 25%);
 @media(min-width: 975px) {
     h1 {
         align-self: flex-start;
@@ -60,18 +61,33 @@ padding-top: 3rem;
 
             }
             }
+section  {
+    background-color: rgb(236,174,42);
+   
 
-
-            }
-           
 }
+
+
+
+form {input[type="submit"] {
+    width: 70%;
+    margin: 1rem 0;
+    background-color: rgb(0,150,161);
+
+}
+
+}
+
+}
+           
+
 `;
 
 
 export const StyledFooter = styled.footer`
 display: flex;
 align-items: center;
-height: 5rem;
+height: 18rem;
 justify-content: center;
 
 `;
@@ -128,12 +144,13 @@ tr:nth-child(even) {
 }
 
 tr:nth-child(odd) {
-    background-color: rgb(0,150,161)
+    background-color: rgb(0,150,161);
 }
 
 th {
-    background-color: white;
-    text-align-items: center;
+    background-color: rgb(76,20,76);
+    color: white;
+   
 }
 
 @media(min-width: 975px) {
@@ -142,8 +159,3 @@ th {
 }
 `;
 
-
-// export const StyledChart = styled.chart`
-
-
-// `;

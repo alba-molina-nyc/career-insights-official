@@ -1,23 +1,21 @@
 import React, {Component} from 'react';
 import { useState } from 'react';
-import {Bar, Line, Pie, Scatter, Radar, PolarArea, Doughnut} 
+import {Bar, Line, Pie, Scatter, Radar, PolarArea} 
 from 'react-chartjs-2';
-import ContactDashboard from '../pages/ContactDashboard';
+import ApplicationDashboard from '../pages/ApplicationDashboard';
 
+const ChartApp = (props) => {
 
-
-const Chart = (props) => {
-
-    const handleLabels = props.contacts.map(contact =>  contact.companyName)
+    const handleLabels = props.applications.map(application =>  application.companyName)
     console.log(handleLabels)
 
-    const handleSingleLabel =  props.contacts.map(contact =>  contact.linkedInConnection)
+    const handleSingleLabel =  props.applications.map(application =>  application.companySize)
     console.log(handleSingleLabel)
 
-    const handleData = props.contacts.map(contact =>  contact.linkedInConnection)
+    const handleData = props.applications.map(application  =>  application.companySize)
     console.log(handleData)
 
-    const [ chartState, setChartState ] = useState({
+    const [ chartAppState, setChartAppState ] = useState({
         
                 labels: handleLabels,
                 datasets: [
@@ -32,8 +30,6 @@ const Chart = (props) => {
                             'rgba(153, 102, 255, 0.2)',
                             'rgba(255, 159, 64, 0.2)'
                         ],
-                    
-                        
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
                             'rgba(54, 162, 235, 1)',
@@ -44,36 +40,37 @@ const Chart = (props) => {
                         ],
                      
                         borderWidth: 1,
-                  
-                        
-            
-               
                         
                        
 
                      }]
                 })
 
-               
-         
-
                      return(
 
-
-  
-                    
-                        <div className="chart">
-                        <Bar
-                        data={chartState}
-                        options={{
-                        }}
-                        />
-                       
-                       
-                    </div>
-        
-                )
-            }
+            <div className="chart">
+                <Bar
+                data={chartAppState}
+                options={{
+                }}
+                />
+               
+                <Pie
+                data={chartAppState}
+                options={{
+                }}
+                />
 
 
-export default Chart;
+                
+               
+               
+            </div>
+
+        )
+    }
+
+
+
+
+export default ChartApp;

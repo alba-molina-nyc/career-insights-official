@@ -6,6 +6,7 @@ import React from "react";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Chart from './components/Chart';
+import ChartApp from './components/ChartApp';
 
 
 
@@ -35,7 +36,7 @@ function App() {
   const [ contacts, setContacts ] = useState([]);
   const [ applications, setApplications ] = useState([]);
   const [ chart, setChart ] = useState([]);
-  const [ contactedChart, setcontactedChart ] = useState([]);
+  const [ chartApp, setChartApp ] = useState([]);
   const fetchData = useRef(null);
   let token;
 
@@ -187,6 +188,22 @@ getContacts();
       const chart = await response.json();
       setChart(chart);
     }
+
+     
+    const getChartApp = async () => {
+      if(!user) return;
+      
+      // get a secure id token from our firebase user
+      const token = await user.getIdToken();
+      const response = await fetch(APPLICATIONS_API_URL, {
+        method: 'GET',
+        headers: {
+          'Authorization': 'Bearer ' + token
+        }
+      });
+      const chartApp = await response.json();
+      setChartApp(chartApp);
+    }
   
 
   // create a reference to our createContact function that persists between renders
@@ -246,13 +263,24 @@ return (
         )} />
   <Route path="/search" >
     </Route>
-        <Route path="/chart" render={() => (
+        <Route path="/chart/contacts" render={() => (
           user ? (
          <Chart
          chart={chart}
             contacts={contacts}
            
             applications={applications}
+          
+            />
+          ) : <Redirect to="/login" />
+        )} />
+        <Route path="/chart/applications" render={() => (
+          user ? (
+         <ChartApp
+         chart={chart}
+            applications={applications}
+           
+       
           
             />
           ) : <Redirect to="/login" />

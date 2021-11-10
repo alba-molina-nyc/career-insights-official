@@ -26,14 +26,18 @@ const ShowContact = (props) => {
             <StyledMain>
                
                 <section>
-                    <h1>Company Name: {props.application.companyName}</h1>
+                 
+                   <h5> {props.application.companyName} </h5>
 
-                    <h1>Job Title: {props.application.title} </h1>
+                    <p>Job Title: {props.application.title}</p>
+
+             
+                
                     
-                    <h3>Next steps: {props.application.nextSteps} </h3>
-                    <h3>Next Steps Due Date: {props.application.dueDate}</h3>
+                    <p> Next steps: {props.application.nextSteps} {props.application.dueDate}</p> 
+          
 
-                    {props.application.companyName && <h5>Company Location: {props.application.location}</h5>}
+                    {props.application.companyName && <h5>Location: {props.application.location}</h5>}
                     <p>Company Size: {props.application.companySize}</p>
                     
                      <a href={props.application.jobPost}>Job Post: {props.application.title}  </a>
