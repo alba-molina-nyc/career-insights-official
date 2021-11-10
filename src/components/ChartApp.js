@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Bar } 
+import { Bar, Pie } 
 from 'react-chartjs-2';
 
 

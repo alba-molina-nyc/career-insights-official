@@ -192,8 +192,7 @@ getContacts();
      
     const getChartApp = async () => {
       if(!user) return;
-      
-      // get a secure id token from our firebase user
+  
       const token = await user.getIdToken();
       const response = await fetch(APPLICATIONS_API_URL, {
         method: 'GET',
