@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { useState } from 'react';
-import {Bar, Line, Pie, Scatter, Radar, PolarArea} 
+import { Bar } 
 from 'react-chartjs-2';
-import ApplicationDashboard from '../pages/ApplicationDashboard';
+
 
 const ChartApp = (props) => {
 
