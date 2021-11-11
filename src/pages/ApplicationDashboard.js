@@ -19,9 +19,9 @@ const ApplicationDashboard = (props) => {
 
     // form helper functions
 
-    useEffect((props) => {
+    useEffect(() => {
         props.getApplications();
-      },[]);
+      },[props]);
 
     const handleChange = event => {
         

@@ -5,6 +5,7 @@ import { StyledForm, StyledMain, StyledSection, StyledTable } from '../styles';
 
 
 const ContactDashboard = (props) => {
+    console.log(props)
     const [ formState, setFormState ] = useState({
         firstName: "",
         lastName: "",
@@ -18,9 +19,9 @@ const ContactDashboard = (props) => {
 
     // form helper functions
 
-    useEffect((props) => {
+    useEffect(() => {
         props.getContacts();
-      },[]);
+      },[props]);
 
     const handleChange = event => {
         
