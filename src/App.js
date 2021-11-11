@@ -43,9 +43,12 @@ function App() {
 
   // ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️    URL  ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️
 
-  const CONTACTS_API_URL = 'http://localhost:3001/api/contacts'; 
+  const CONTACTS_API_URL = 'https://keen-tereshkova-cbd71b.netlify.app/contacts';
+  
+  // 'http://localhost:3001/api/contacts'; 
 
-  const APPLICATIONS_API_URL = 'http://localhost:3001/api/applications'; 
+  const APPLICATIONS_API_URL = 'https://keen-tereshkova-cbd71b.netlify.app/applications';
+  // 'http://localhost:3001/api/applications'; 
 
 // ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️    CONTACTS GET CONTACT FUNCTION    ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️ 
   const getContacts = async () => {
