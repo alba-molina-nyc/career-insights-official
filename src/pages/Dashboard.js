@@ -1,8 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { StyledMain } from '../styles';
 import { Link } from 'react-router-dom';
-const CONTACTS_API_URL = 'http://localhost:3001/api/contacts'; 
-const APPLICATIONS_API_URL = 'http://localhost:3001/api/applications'; 
 const Dashboard = (props) => {
     
 

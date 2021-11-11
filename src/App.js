@@ -79,38 +79,6 @@ function App() {
     getContacts(); // we can now refresh our list of contacts
   } 
 
-  //  ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️    CONTACTS UPDATE CONTACT FUNCTION   ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️
-
-  const updateContact = async person => {
-    if(!user) return;
-    const token = await user.getIdToken();
-    const data = {...person, managedBy: user.uid} // attach logged in user's uid to the data we send to the server
-    await fetch(CONTACTS_API_URL, {
-      method: 'PUT', 
-      headers: {
-        'Content-type': 'Application/json',
-        'Authorization': 'Bearer ' + token
-      },
-      body: JSON.stringify(data)
-    });
-    getContacts(); // we can now refresh our list of contacts
-  };
-
-// ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️    CONTACTS DELETE CONTACT FUNCTION    ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️ 
-const deleteContact = async person => {
-  if(!user) return;
-  const token = await user.getIdToken();
-  const data = {...person, managedBy: user.uid} 
-  await fetch(CONTACTS_API_URL, {
-    method: 'DELETE',
-    headers: {
-      'Content-type': 'Application/json',
-      'Authorization': 'Bearer ' + token
-    }
-});
-getContacts();
-};
-
 // ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️    CONTACTS CREATE NOTE FUNCTION   ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️ 
   const createNote = async (note, id) => {
     if(!user) return;
@@ -299,7 +267,6 @@ return (
             <ShowContact 
               contact={contacts.find(c => c._id === props.match.params.id)} 
               createNote={createNote}
-              deleteContact={deleteContact(c => c._id === props.match.params.id)}
             />
           ) : <Redirect to="/login" />
         )} />
