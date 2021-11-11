@@ -10,12 +10,19 @@ const Dashboard = (props) => {
             <title>Career Insights | Dashboard</title>
         </Helmet>
 
+        <div>
+            <h1>Keep track of all moving parts in your career in one place</h1>
+
+        </div>
+
         <StyledMain>
-            <h1><Link to="/contacts">Networking Management Dashboard </Link></h1>
-            <h1><Link to="/applications">Job Application Management Dashboard </Link></h1>
-            <h1><Link to="chart/contacts">Networking Management Data & Analytics </Link></h1>
-            <h1><Link to="/chart/applications">Job Application Management Data & Analytics </Link></h1>
-            <h1><Link to="/search">Search</Link></h1>
+            <p><Link to="/contacts">Networking Management</Link></p>
+            <p><Link to="chart/contacts">Networking Management Data & Analytics </Link> </p>
+            <p><Link to="/applications">Job Application Management</Link></p>
+            <p><Link to="/chart/applications">Job Application Management Data & Analytics </Link></p>
+            <label for="site-search">Search the site: </label>
+            <input type="search"></input>
+            <input type="submit">search</input>
     
         </StyledMain>
         </>

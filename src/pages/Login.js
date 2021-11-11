@@ -9,8 +9,9 @@ const Login = (props) => {
                 <title>Login | Career Post ⚛️</title>
             </Helmet>
             <StyledMain>
-                <h1>Login</h1>
+                <div>
                 <button onClick={signIn}>Sign in with Google</button>
+                </div>
             </StyledMain>
         </>
     );

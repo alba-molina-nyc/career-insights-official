@@ -41,6 +41,8 @@ export const StyledHeader = styled.header`
         }
         
     }`
+
+
 export const StyledMain = styled.main`
 flex-grow: 1;
 display: flex;  
@@ -68,6 +70,11 @@ section  {
 
 
 
+
+
+
+
+
 form {input[type="submit"] {
     width: 70%;
     margin: 1rem 0;
@@ -84,11 +91,11 @@ form {input[type="submit"] {
 
 
 export const StyledFooter = styled.footer`
-display: flex;
-align-items: center;
-height: 18rem;
-justify-content: center;
-
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    justify-content: center;
+   
 `;
 
 
@@ -135,7 +142,7 @@ border-collapse: collapse;
 border-spacing: 0;
 width: 100%;
 th, td {
-    text-align: left;
+    text-align: center;
     padding: 5px;
 }
 tr:nth-child(even) {
