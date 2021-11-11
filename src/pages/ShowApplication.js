@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { StyledMain } from '../styles';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const ShowContact = (props) => {
     const [formState, setFormState ] = useState({
