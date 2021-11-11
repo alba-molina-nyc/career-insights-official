@@ -19,7 +19,7 @@ const ApplicationDashboard = (props) => {
 
     // form helper functions
 
-    useEffect(() => {
+    useEffect((props) => {
         props.getApplications();
       },[]);
 

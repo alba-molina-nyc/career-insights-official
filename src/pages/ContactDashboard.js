@@ -18,7 +18,7 @@ const ContactDashboard = (props) => {
 
     // form helper functions
 
-    useEffect(() => {
+    useEffect((props) => {
         props.getContacts();
       },[]);
 
@@ -51,9 +51,9 @@ const ContactDashboard = (props) => {
         }); // clear form after its been submitted
     }
 
-    const handleDelete = async ({deleteContact, data}) => {
-    await deleteContact(c => c._id).push
-    }
+    // const handleDelete = async ({deleteContact, data}) => {
+    // await deleteContact(c => c._id).push
+    // }
 
     
     return (

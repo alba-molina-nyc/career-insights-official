@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import { StyledMain } from '../styles';
 const Product = (props) => {
     return (

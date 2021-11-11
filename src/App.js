@@ -168,8 +168,8 @@ function App() {
           'Authorization': 'Bearer ' + token
         }
       });
-      const chartApp = await response.json();
-      setChartApp(chartApp);
+      let res = await response.json();
+      setChartApp(res);
     }
   
 
@@ -234,9 +234,9 @@ return (
           user ? (
          <Chart
          chart={chart}
-            contacts={contacts}
-           
-            applications={applications}
+         getChart={getChart}
+         contacts={contacts}
+         applications={applications}
           
             />
           ) : <Redirect to="/login" />
@@ -244,11 +244,8 @@ return (
         <Route path="/chart/applications" render={() => (
           user ? (
          <ChartApp
-         chart={chart}
-            applications={applications}
-           
-       
-          
+         chartApp={chartApp}
+         getChartApp={getChartApp}
             />
           ) : <Redirect to="/login" />
         )} />

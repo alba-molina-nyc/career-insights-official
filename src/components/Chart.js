@@ -64,6 +64,7 @@ const Chart = (props) => {
                         <div className="chart">
                         <Bar
                         data={chartState}
+                        setChartState={setChartState}
                         options={{
                         }}
                         />

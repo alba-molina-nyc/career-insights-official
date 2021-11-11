@@ -51,12 +51,14 @@ const ChartApp = (props) => {
             <div className="chart">
                 <Bar
                 data={chartAppState}
+                setChartAppState={setChartAppState}
                 options={{
                 }}
                 />
                
                 <Pie
                 data={chartAppState}
+                setChartAppState={setChartAppState}
                 options={{
                 }}
                 />
