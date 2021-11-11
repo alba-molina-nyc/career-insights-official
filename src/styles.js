@@ -47,7 +47,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding-top: 3rem;
-background-color: rgb(76,20,76, 25%);
+background-color: rgb(245,218,126);
 @media(min-width: 975px) {
     h1 {
         align-self: flex-start;
@@ -63,9 +63,8 @@ background-color: rgb(76,20,76, 25%);
             }
 section  {
     background-color: rgb(236,174,42);
-   
-
 }
+
 
 
 
