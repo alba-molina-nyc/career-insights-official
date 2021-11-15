@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Routes, Route, Redirect } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import React from "react";
 
 
@@ -53,7 +53,6 @@ function App() {
   const getContacts = async () => {
     if(!user) return;
     
-    // get a secure id token from our firebase user
     const token = await user.getIdToken();
     const response = await fetch(CONTACTS_API_URL, {
       method: 'GET',
@@ -69,7 +68,7 @@ function App() {
   const createContact = async person => {
     if(!user) return;
     const token = await user.getIdToken();
-    const data = {...person, managedBy: user.uid} // attach logged in user's uid to the data we send to the server
+    const data = {...person, managedBy: user.uid}
     await fetch(CONTACTS_API_URL, {
       method: 'POST', 
       headers: {
