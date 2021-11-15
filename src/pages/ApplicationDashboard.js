@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { StyledForm, StyledMain, StyledSection, StyledTable } from '../styles';
 
 const ApplicationDashboard = (props) => {
