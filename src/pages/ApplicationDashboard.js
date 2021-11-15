@@ -157,7 +157,7 @@ const ApplicationDashboard = (props) => {
                             <th>Position</th>
                             <th>Company Name</th>
                             <th>Location</th>
-                            <th>Actions</th>
+                            {/* <th>Actions</th> */}
                            
                         </tr>
                     </thead>
@@ -168,7 +168,7 @@ const ApplicationDashboard = (props) => {
                                     <td>{a.title}</td>
                                     <td>{a.companyName}</td>
                                     <td>{a.location}</td>
-                                    <td><Link to={`/applications/${a._id}`}>See More Details</Link></td>
+                                    {/* <td><Link to={`/applications/${a._id}`}>See More Details</Link></td> */}
                                 </tr>
                             ))
                         }

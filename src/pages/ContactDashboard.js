@@ -158,7 +158,7 @@ const ContactDashboard = (props) => {
                             <th>Last Name</th>
                             <th>Company Name</th>
                             <th>Company Size</th>
-                            <th>Details</th>
+                            {/* <th>Details</th> */}
                         </tr>
                     </thead>
                     <tbody>
@@ -169,7 +169,7 @@ const ContactDashboard = (props) => {
                                     <td>{c.lastName}</td>
                                     <td>{c.companyName}</td>
                                     <td>{c.companySize}</td>
-                                    <td><Link to={`/contacts/${c._id}`}>See More Details</Link></td>
+                                    {/* <td><Link to={`/contacts/${c._id}`}>See More Details</Link></td> */}
                                 </tr>
                             ))
                         }
