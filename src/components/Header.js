@@ -31,15 +31,6 @@ const Header = (props) => {
                             <li onClick={logOut}>Logout</li>
                         </>
                         :<>
-                        <li>
-                        <Link to="/product">Product</Link> 
-                       </li>
-                       <li>
-                           <Link to="/solutions">Solutions</Link>
-                          </li>
-                          <li>
-                           <Link to="/about">About</Link>
-                           </li>
                        <li>
                             <Link to="/login">Login</Link>
                         </li>

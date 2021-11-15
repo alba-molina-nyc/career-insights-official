@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { StyledMain } from '../styles';
+import { Outlet } from 'react-router-dom';
 
 const Show = (props) => {
     const [formState, setFormState ] = useState({
@@ -20,6 +21,7 @@ const Show = (props) => {
   
     return (
         <>
+     <Outlet>
             <Helmet>
                 <title>{props.contact.firstName} {props.contact.lastName} | Career Post </title>
             </Helmet>
@@ -54,6 +56,7 @@ const Show = (props) => {
                     </form>
                 </section>
             </StyledMain>
+            </Outlet>
         </>
     );
 };

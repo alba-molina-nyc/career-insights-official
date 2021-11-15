@@ -20,9 +20,9 @@ const Dashboard = (props) => {
             <p><Link to="chart/contacts">Networking Management Data & Analytics </Link> </p>
             <p><Link to="/applications">Job Application Management</Link></p>
             <p><Link to="/chart/applications">Job Application Management Data & Analytics </Link></p>
-            <label for="site-search">Search the site: </label>
+            {/* <label for="site-search">Search the site: </label>
             <input type="search"></input>
-            <input type="submit">search</input>
+            <input type="submit">search</input> */}
     
         </StyledMain>
         </>
