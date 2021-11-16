@@ -34,11 +34,8 @@ Screenshots
 
 
 
-Take it for a ride🔑🏎
+
 Take it for a ride🔑🏎 
 https://keen-tereshkova-cbd71b.netlify.app
 
 
-![demoWalkThrough ](https://share.vidyard.com/watch/kZiqiRm2HZiuprf17v94k6?) 
-
-![demoWalkThrough](https://share.vidyard.com/watch/kZiqiRm2HZiuprf17v94k6?) 
