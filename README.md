@@ -30,6 +30,7 @@ Screenshots
 ![readRoute](https://i.imgur.com/VIbe9HY.png)
 ![jobApplicationsReadRoute](https://i.imgur.com/c1NsQkO.png)
 ![dataAndAnalytics](https://i.imgur.com/saMx7wu.png)
+![demoWalkThrough](https://secure.vidyard.com/organizations/1997026/players/kZiqiRm2HZiuprf17v94k6?edit=true#embed)
 
 
 Take it for a ride🔑🏎 [deployment](https://keen-tereshkova-cbd71b.netlify.app/applications) 
