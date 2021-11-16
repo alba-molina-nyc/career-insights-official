@@ -33,4 +33,6 @@ Screenshots
 ![demoWalkThrough](https://secure.vidyard.com/organizations/1997026/players/kZiqiRm2HZiuprf17v94k6?edit=true#embed)
 
 
-Take it for a ride🔑🏎 [deployment](https://share.vidyard.com/watch/kZiqiRm2HZiuprf17v94k6?) 
+Take it for a ride🔑🏎 ![takeitForaRide🔑🏎 ](https://keen-tereshkova-cbd71b.netlify.app) 
+
+![demoWalkThrough](https://share.vidyard.com/watch/kZiqiRm2HZiuprf17v94k6?) 
