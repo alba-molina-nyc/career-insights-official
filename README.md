@@ -32,6 +32,7 @@ Screenshots
 ![dataAndAnalytics](https://i.imgur.com/saMx7wu.png)
 
 
-Take it for a ride🔑🏎 ![takeitForaRide🔑🏎 ](https://keen-tereshkova-cbd71b.netlify.app) 
+Take it for a ride🔑🏎 
+https://keen-tereshkova-cbd71b.netlify.app
 
 ![demoWalkThrough](https://share.vidyard.com/watch/kZiqiRm2HZiuprf17v94k6?) 
